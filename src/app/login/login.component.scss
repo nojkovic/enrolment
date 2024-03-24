@@ -1,0 +1,116 @@
+$darkBlue:#0C4062;
+$lightBlue:#1B7F9C;
+$light:#F5F7F9;
+@mixin flexCenter{
+    display: flex;
+    justify-content: center !important;
+}
+@mixin flexDirectionContent($display,$flex,$justify){
+    display: $display;
+    flex-direction: $flex;
+    justify-content: $justify;
+}
+.main{
+    background-image: url(../../assets/image/login-bg.png);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    @include flexDirectionContent(flex,column ,space-between );
+
+}
+.content{
+    align-self: center;
+    align-items: center;
+    height: 50vh;
+    width: 70vh;
+    
+}
+#loginImage {
+    @include flexCenter();
+    margin-top:30%;
+    img{
+        width: 120px;
+    } 
+    
+}
+.footer{
+    height: 10vh;
+    width: 100%;
+    margin:0px auto;
+    @include flexCenter();
+    img{
+        width: 150px;
+    }
+}
+.loginForm{
+    //border: 1px solid black;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    height: 40vh;
+    width: 65vh;
+    margin:0px auto;
+    margin-top: 7%;
+    align-items: center;
+    
+    @include flexDirectionContent(flex,column , none);
+    h2{
+        padding-top: 7%;
+        font-family: "Poppins", sans-serif;
+    }
+    p{
+        color:#848282;
+        padding: 3% 0px;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+    }
+    .line{
+        @include flexDirectionContent(flex,row ,none );
+        width: 100%;
+        padding-top: 0px !important;
+       
+        >:nth-child(1){
+            width: 33%;
+            border:3px solid $darkBlue;
+        }
+        >:nth-child(2){
+            width: 33%;
+            border:3px solid $lightBlue;
+        }
+        >:nth-child(3){
+            width: 33%;
+            border:3px solid $light;
+        }
+
+    }
+}
+input[type="text"],input[type="password"]{
+    border: none; 
+    outline: none;   
+    
+}
+.inputLogin{
+    border:1px solid $lightBlue;
+    display: flex;
+    border-radius: 10px;
+    width: 330px;
+    height: 40px;
+    margin: 1.5%;
+    align-items: center; 
+    padding-left: 1.5%;
+
+}
+
+#btnLogin{
+    width: 330px;
+    height: 40px;
+    border-radius: 10px;
+    border:1px solid $lightBlue;
+    color:#fff;
+    margin-top:5%;
+    background-color: $lightBlue;
+}
+.padd{
+    padding-left:3%;  
+}

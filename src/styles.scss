@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 550px) {
+    
+    .loginForm{
+        width: 90%!important;
+        height: auto !important;
+        h2{
+            font-size: 18px!important;
+        }
+        p{
+            font-size: 10px!important;
+        }
+ 
+    }
+    .content{
+        width: 100% !important;
+    }
+    .main{
+        width: 100% !important;
+    }
+    .inputLogin{
+        width: 90% !important;
+        
+       
+    }
+    #btnLogin{
+        width: 90%!important;
+        
+    }
+    .footer{
+        width: 100px !important;
+        img{
+            width: 120px!important;
+        }
+    }
+}
