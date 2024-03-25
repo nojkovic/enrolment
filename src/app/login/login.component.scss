@@ -1,22 +1,14 @@
-$darkBlue:#0C4062;
-$lightBlue:#1B7F9C;
-$light:#F5F7F9;
-@mixin flexCenter{
-    display: flex;
-    justify-content: center !important;
-}
-@mixin flexDirectionContent($display,$flex,$justify){
-    display: $display;
-    flex-direction: $flex;
-    justify-content: $justify;
-}
+@import '../../assets/css/color.scss';
+@import '../../assets/css/mixin.scss';
+
+
 .main{
     background-image: url(../../assets/image/login-bg.png);
     background-size: cover;
     height: 100vh;
     width: 100%;
     font-family: "Poppins", sans-serif;
-    @include flexDirectionContent(flex,column ,space-between );
+    @include flexDirectionContent(column,space-between);
 
 }
 .content{
@@ -27,7 +19,7 @@ $light:#F5F7F9;
     
 }
 #loginImage {
-    @include flexCenter();
+    @include flexDirectionContent(none,center);
     margin-top:30%;
     img{
         width: 120px;
@@ -38,7 +30,7 @@ $light:#F5F7F9;
     height: 10vh;
     width: 100%;
     margin:0px auto;
-    @include flexCenter();
+    @include flexDirectionContent(none,center);
     img{
         width: 150px;
     }
@@ -54,7 +46,7 @@ $light:#F5F7F9;
     margin-top: 7%;
     align-items: center;
     
-    @include flexDirectionContent(flex,column , none);
+    @include flexDirectionContent(column , none);
     h2{
         padding-top: 7%;
         font-family: "Poppins", sans-serif;
@@ -66,9 +58,9 @@ $light:#F5F7F9;
         font-family: "Poppins", sans-serif;
     }
     .line{
-        @include flexDirectionContent(flex,row ,none );
+        @include flexDirectionContent(row ,none );
         width: 100%;
-        padding-top: 0px !important;
+        padding-top: 0px;
        
         >:nth-child(1){
             width: 33%;
@@ -113,4 +105,39 @@ input[type="text"],input[type="password"]{
 }
 .padd{
     padding-left:3%;  
+}
+@media screen and (max-width: 550px) {
+    
+    .loginForm{
+        width: 90%;
+        height: auto;
+        h2{
+            font-size: 18px;
+        }
+        p{
+            font-size: 10px;
+        }
+ 
+    }
+    .content{
+        width: 100% ;
+    }
+    .main{
+        width: 100% ;
+    }
+    .inputLogin{
+        width: 90% ;
+        
+       
+    }
+    #btnLogin{
+        width: 90%;
+        
+    }
+    .footer{
+        width: 100px;
+        img{
+            width: 120px;
+        }
+    }
 }
