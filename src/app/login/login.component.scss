@@ -106,6 +106,10 @@ input[type="text"],input[type="password"]{
 .padd{
     padding-left:3%;  
 }
+.error{
+    font-size: 12px;
+    color:rgb(251, 109, 109)
+}
 @media screen and (max-width: 550px) {
     
     .loginForm{

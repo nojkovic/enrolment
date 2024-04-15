@@ -5,7 +5,7 @@
             <img src="../../assets/image/utopia_logo.png" alt="slika"/>
         </div>
         
-        <form class="loginForm">
+        <form [formGroup]="loginForm"  class="loginForm">
             <div class="line">
                 <div></div>
                 <div></div>
@@ -18,15 +18,19 @@
                     <img src="../../assets/image/user.svg" />
                   
                 </label>
-                <input type="text" id="emailLogin" class="padd" placeholder="Username or email"/>
+                <input type="text" formControlName="email" id="emailLogin" class="padd" placeholder="Username or email"/>
+
             </div>
+            <span class="error" *ngIf="Email.errors?.['email'] ">Email is not in good format.</span>
             <div class="inputLogin"> 
                 <label for="passLogin" >
                     <img src="../../assets/image/lock.svg" />
                 </label>
-                <input type="password" id="passLogin" class="padd" placeholder="Password"/>
+                <input type="password" formControlName="pass" id="passLogin" class="padd" placeholder="Password"/>
             </div>
-           <button type="submit" id="btnLogin">Login</button>
+            <span class="error" *ngIf="Password.errors?.['minlength'] ">Password must contains at least 9 characters.</span>
+            <span id="message" class="error">{{message}}</span>
+            <button type="button" (click)="loginSubmit()" id="btnLogin">Login</button>
         </form>
         
     </div>
