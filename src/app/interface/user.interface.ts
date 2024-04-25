@@ -1,7 +1,7 @@
-export interface User{
-    name?:String,
-    email:String,
-    password:String,
-    lastName?:String,
-
+export interface User {
+  name?: String;
+  email: String;
+  password: String;
+  lastName?: String;
+  roleId?: number;
 }

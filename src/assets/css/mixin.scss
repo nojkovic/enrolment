@@ -1,6 +1,5 @@
-
-@mixin flexDirectionContent($flex,$justify){
-    display:flex;
-    flex-direction: $flex;
-    justify-content: $justify;
+@mixin flexDirectionContent($flex, $justify) {
+  display: flex;
+  flex-direction: $flex;
+  justify-content: $justify;
 }

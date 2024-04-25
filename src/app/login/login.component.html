@@ -1,43 +1,54 @@
 <div class="main">
-    <div class="content">
-        
-        <div id="loginImage">
-            <img src="../../assets/image/utopia_logo.png" alt="slika"/>
-        </div>
-        
-        <form [formGroup]="loginForm"  class="loginForm">
-            <div class="line">
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-           <h2>Welcome back</h2>
-           <p>Sign in to your account</p>
-           <div class="inputLogin"> 
-                <label for="emailLogin" >
-                    <img src="../../assets/image/user.svg" />
-                  
-                </label>
-                <input type="text" formControlName="email" id="emailLogin" class="padd" placeholder="Username or email"/>
-
-            </div>
-            <span class="error" *ngIf="Email.errors?.['email'] ">Email is not in good format.</span>
-            <div class="inputLogin"> 
-                <label for="passLogin" >
-                    <img src="../../assets/image/lock.svg" />
-                </label>
-                <input type="password" formControlName="pass" id="passLogin" class="padd" placeholder="Password"/>
-            </div>
-            <span class="error" *ngIf="Password.errors?.['minlength'] ">Password must contains at least 9 characters.</span>
-            <span id="message" class="error">{{message}}</span>
-            <button type="button" (click)="loginSubmit()" id="btnLogin">Login</button>
-        </form>
-        
+  <div class="content">
+    <div id="loginImage">
+      <img src="../../assets/image/utopia_logo.png" alt="slika" />
     </div>
-    <footer>
-        <div class="footer">
-            <img src="../../assets/image/logo-product.svg" alt="slika"/>
-        </div>
-    </footer>
-    
+
+    <form [formGroup]="loginForm" class="loginForm">
+      <div class="line">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h2>Welcome back</h2>
+      <p>Sign in to your account</p>
+      <div class="inputLogin">
+        <label for="emailLogin">
+          <img src="../../assets/image/user.svg" />
+        </label>
+        <input
+          type="text"
+          formControlName="email"
+          id="emailLogin"
+          class="padd"
+          placeholder="Username or email"
+        />
+      </div>
+      <span class="error" *ngIf="Email.errors?.['email']"
+        >Email is not in good format.</span
+      >
+      <div class="inputLogin">
+        <label for="passLogin">
+          <img src="../../assets/image/lock.svg" />
+        </label>
+        <input
+          type="password"
+          formControlName="pass"
+          id="passLogin"
+          class="padd"
+          placeholder="Password"
+        />
+      </div>
+      <span class="error" *ngIf="Password.errors?.['minlength']"
+        >Password must contains at least 9 characters.</span
+      >
+      <span id="message" class="error">{{ message }}</span>
+      <button type="button" (click)="loginSubmit()" id="btnLogin">Login</button>
+    </form>
+  </div>
+  <footer>
+    <div class="footer">
+      <img src="../../assets/image/logo-product.svg" alt="slika" />
+    </div>
+  </footer>
 </div>
